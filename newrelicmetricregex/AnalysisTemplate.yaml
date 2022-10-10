@@ -14,14 +14,14 @@ spec:
         opsmx:
           profile: opsmx-profile-v3
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: newrelicregexapp
+          application: prometheusregexapp
           user: admin
           lifetimeMinutes: 6
           threshold:
             pass: 80
             marginal: 60
           services:
-          - metricTemplateName: newrelicregextemplate
-            metricScopeVariables: "app_key,pod_key"
-            baselineMetricScope: "demo-test,{{args.baseline-hash}}"
-            canaryMetricScope: "demo-test,{{args.canary-hash}}"
+          - metricTemplateName: prometheusregextemplate
+            metricScopeVariables: "namespace_key,pod_key"
+            baselineMetricScope: "argocd,{{args.baseline-hash}}"
+            canaryMetricScope: "argocd,{{args.canary-hash}}"
