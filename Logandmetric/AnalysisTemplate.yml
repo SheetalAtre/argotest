@@ -14,7 +14,7 @@ name: sj-analysis
         opsmx:
           profile: opsmx-profile-v3
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: final-tests
+          application: Test-run
           user: admin
           lifetimeMinutes: 6
           threshold:
