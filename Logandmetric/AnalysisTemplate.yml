@@ -1,13 +1,13 @@
 kind: AnalysisTemplate
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: sj-analysis
+  name: test-analysis
 spec:
   args:
 name: canary-hash
 name: baseline-hash
   metrics:
-name: sj-analysis
+name: test-analysis
       count: 1
       initialDelay: 10s
       provider:
@@ -20,8 +20,6 @@ name: sj-analysis
           threshold:
             pass: 80
             marginal: 60
-          globalMetricTemplate: prometheustemplate
-          globalLogTemplate: elastictemplate
           services:
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
