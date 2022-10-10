@@ -20,17 +20,17 @@ name: sj-analysis
           threshold:
             pass: 80
             marginal: 60
-          globalMetricTemplate: prometheusverification
-          globalLogTemplate: logtemp
+          globalMetricTemplate: prometheustemplate
+          globalLogTemplate: elastictemplate
           services:
             metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate"
+            metricTemplateName: "PrometheusLocalTemplate"
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".{{args.baseline-hash}}."
             canaryLogScope: ".{{args.baseline-hash}}."
-            logTemplateName: "stackdriver-validator"
+            logTemplateName: "stackdrivertemplatetest"
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".{{args.baseline-hash}}."
             canaryLogScope: ".{{args.baseline-hash}}."
