@@ -10,7 +10,7 @@ spec:
           profile: "opsmx-profile"
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           user: admin
-          application: splunckapp1
+          application: testsplunk
           baselineStartTime: "2022-03-08T10:46:00Z"
           canaryStartTime: "2022-03-08T10:46:00Z"
           lifetimeMinutes: 6
