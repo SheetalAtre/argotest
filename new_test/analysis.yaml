@@ -4,7 +4,7 @@ metadata:
   name: analysis-temp-opsmx
 data:
   providerConfig: |
-    application: final-test-ta
+    application: test-agent
     user: admin
     opsmxIsdUrl: 'https://isd-int-env.isd-dev.opsmx.net'
     lifetimeMinutes: 3
